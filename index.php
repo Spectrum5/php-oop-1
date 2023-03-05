@@ -17,24 +17,37 @@ require  __DIR__ . '/classes/classMovie.php';
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 
         <!-- Style css -->
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="style/style.css">
         
         <title>PHP OOP 1</title>
     </head>
 
-    <body>
-        <?php
-
-            for ($i = 0; $i < count($films); $i++) {
-            $film = new movie($films[$i]['name'], $films[$i]['duration'], $films[$i]['adult'], $films[$i]['publication']);
-        ?>
-            <ul>
-                <li><?php echo $film->getTitle() ?></li>
-                <li><?php echo $film->durate ?></li>
-                <li><?php echo $film->yearPublication ?></li>
-                <li><?php echo $film->movieYears ?></li>
-            </ul>
-        <?php }; ?>
+    <body class="text-center">
+        
+        <div class="container">
+            <h1 class="text-white">
+                Lista Film
+            </h1>
+            <?php
+                for ($i = 0; $i < count($films); $i++) {
+                $film = new movie($films[$i]['name'], $films[$i]['duration'], $films[$i]['adult'], $films[$i]['publication']);
+            ?>
+                <ul class="d-flex list-unstyled">
+                    <li>
+                        <?php echo $film->getTitle() ?>
+                    </li>
+                    <li>
+                        <?php echo $film->durate ?>
+                    </li>
+                    <li>
+                        <?php echo $film->yearPublication ?>
+                    </li>
+                    <li>
+                        <?php echo $film->movieYears ?>
+                    </li>
+                </ul>
+            <?php }; ?>
+        </div>
     </body>
 
 </html>

@@ -1,0 +1,27 @@
+body {
+    background-color: rgb(40, 37, 37);
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+li {
+    font-weight: bold;
+    background-color: rgb(73, 80, 214);
+    width: 25%;
+    padding: 40px;
+    margin: 10px 0px;
+}
+
+li:first-child {
+    border-radius: 10px 0px 0px 10px;
+}
+
+li:last-child {
+    border-radius: 0px 10px 10px 0px;
+}
+
+li:hover {
+    background-color: rgb(93, 119, 157);
+}
