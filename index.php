@@ -28,11 +28,19 @@ require  __DIR__ . '/classes/classMovie.php';
             <h1 class="text-white">
                 Lista Film
             </h1>
+
+            <ul class="section-film d-flex list-unstyled">
+                <li>titolo</li>
+                <li>durata</li>
+                <li>pubblicazione</li>
+                <li>anni</li>
+            </ul>
+
             <?php
                 for ($i = 0; $i < count($films); $i++) {
                 $film = new movie($films[$i]['name'], $films[$i]['duration'], $films[$i]['adult'], $films[$i]['publication']);
             ?>
-                <ul class="d-flex list-unstyled">
+                <ul class="d-flex list-unstyled info-film">
                     <li>
                         <?php echo $film->getTitle() ?>
                     </li>
@@ -49,5 +57,4 @@ require  __DIR__ . '/classes/classMovie.php';
             <?php }; ?>
         </div>
     </body>
-
 </html>
